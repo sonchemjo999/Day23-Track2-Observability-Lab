@@ -86,7 +86,7 @@ services:
       - "127.0.0.1:3100:3100"
     volumes:
       - ./03-tracing-and-logs/loki/loki-config.yaml:/etc/loki/local-config.yaml:ro
-    command: -config.file=/etc/loki/local-config.yaml
+    command: -config.file=/etc/loki/local-config.yaml -target=all
     networks: [obs]
 
   jaeger:
